@@ -28,16 +28,56 @@ if (text is not null)
 
 app.MapGet("/symbols", () =>
 {
-    return symbols?.Select(_ => _.Name);
+    string res = "OK\n";
+    foreach (var item in symbols?.Select(_ => _.Name).Distinct())
+    {
+        res += item + ",";
+    }
+    res = res.Substring(0, res.Length - 1);
+    return res;
+    //return symbols?.Select(_ => _.Name);
 })
 .WithName("Get All Symbols")
 .WithOpenApi();
 
-app.MapGet("/info", (string symbol, DateTime start, DateTime end) =>
+app.MapGet("/info", (string symbol, DateTime start) =>
 {
-    return symbols?.Where(_ => _.Name == symbol);
+    string res = "";
+    foreach (var item in symbols?.Where(_ => _.Name == symbol  && _.Date>start))
+    {
+        res += item.Date.ToString("yyMMdd") + ",";
+        res += item.Date.ToString("HHmm") + ",";
+        res += item.Open.ToString() + ",";
+        res += item.High.ToString() + ",";
+        res += item.Low.ToString() + ",";
+        res += item.Close.ToString() + ",";
+        res += item.Volume.ToString();
+        res += "\n";
+    }
+    return res;
+    //return symbols?.Where(_ => _.Name == symbol  && _.Date>start);
 })
 .WithName("Get Symbol Info")
 .WithOpenApi();
+
+//app.MapGet("/last", (string symbol, DateTime start) =>
+//{
+//    string res = "OK\n";
+//    foreach (var item in symbols?.Where(_ => _.Name == symbol  && _.Date>start))
+//    {
+//        res += item.Date.ToShortDateString().Replace("/","-") + ",";
+//        res += item.Date.ToLongTimeString() + ",";
+//        res += item.Open.ToString() + ",";
+//        res += item.High.ToString() + ",";
+//        res += item.Low.ToString() + ",";
+//        res += item.Close.ToString() + ",";
+//        res += item.Volume.ToString();
+//        res += "\n";
+//    }
+//    return res;
+//    //return symbols?.Where(_ => _.Name == symbol  && _.Date>start);
+//})
+//.WithName("Get Symbol Info")
+//.WithOpenApi();
 
 app.Run();

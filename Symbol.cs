@@ -12,5 +12,6 @@ public class Symbol
 
     public double Close { get; set; }
 
+    public double Volume { get; set; }
     public DateTime Date { get; set; }
 }

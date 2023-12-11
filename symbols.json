@@ -2,19 +2,120 @@
     "symbols":
     [
         {
-            "Name": "USD/BTC",
-            "High": 1.2,
-            "Low": 1.1,
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
             "Open": 1.1,
-            "Close": 1.2,
+            "Close": 1.5,
+            "Volume": 123,
             "Date": "2023-01-01T00:00:00.000Z"
         },
         {
-            "Name": "USD/IRR",
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.5,
+            "Close": 1.1,
+            "Volume": 123,
+            "Date": "2023-01-02T00:00:00.000Z"
+        },
+        {
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.1,
+            "Close": 1.5,
+            "Volume": 123,
+            "Date": "2023-01-03T00:00:00.000Z"
+        },
+        {
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.5,
+            "Close": 1.1,
+            "Volume": 123,
+            "Date": "2023-01-04T00:00:00.000Z"
+        },
+        {
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.1,
+            "Close": 1.5,
+            "Volume": 123,
+            "Date": "2023-01-05T00:00:00.000Z"
+        },
+        {
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.5,
+            "Close": 1.1,
+            "Volume": 123,
+            "Date": "2023-01-06T00:00:00.000Z"
+        },
+        {
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.1,
+            "Close": 1.5,
+            "Volume": 123,
+            "Date": "2023-01-07T00:00:00.000Z"
+        },
+        {
+            "Name": "USDBTC",
+            "High": 2.0,
+            "Low": 1.0,
+            "Open": 1.5,
+            "Close": 1.1,
+            "Volume": 123,
+            "Date": "2023-01-08T00:00:00.000Z"
+        },
+        {
+            "Name": "XAUUSD",
+            "High": 2000, 
+            "Low": 1990,
+            "Open": 1995,
+            "Close": 1998,
+            "Volume": 123,
+            "Date": "2023-01-01T00:00:00.000Z"
+        },
+        {
+            "Name": "XAUUSD",
+            "High": 2000, 
+            "Low": 1990,
+            "Open": 1995,
+            "Close": 1998,
+            "Volume": 123,
+            "Date": "2023-01-02T00:00:00.000Z"
+        },
+        {
+            "Name": "XAUUSD",
             "High": 1.2,
             "Low": 1.1,
             "Open": 1.1,
             "Close": 1.2,
+            "Volume": 123,
+            "Date": "2023-01-03T00:00:00.000Z"
+        },
+        {
+            "Name": "BTCUSD",
+            "High": 1.2,
+            "Low": 1.1,
+            "Open": 1.1,
+            "Close": 1.2,
+            "Volume": 123,
+            "Date": "2023-01-01T00:00:00.000Z"
+        },
+        {
+            "Name": "USDIRR",
+            "High": 1.2,
+            "Low": 1.1,
+            "Open": 1.1,
+            "Close": 1.2,
+            "Volume": 123,
             "Date": "2023-01-03T00:00:00.000Z"
         }
     ]
