@@ -27,9 +27,9 @@ app.UseHttpsRedirection();
 //    symbols = JsonSerializer.Deserialize<List<Symbol>>(root);
 //}
 
-using(var context=new APIContext())
+using (var context = new APIContext())
 {
-    context.Books.Add(new Symbol()
+    context.Symbols.Add(new Symbol()
     {
         Name = "BTCUSD",
         Date = DateTime.Now,
@@ -46,7 +46,7 @@ app.MapGet("/symbols", () =>
     string res = "OK\n";
     using (var context = new APIContext())
     {
-        var syms = context.Books.ToList();
+        var syms = context.Symbols.ToList();
         foreach (var item in syms.Select(_ => _.Name).Distinct())
         {
             res += item + ",";
@@ -64,7 +64,7 @@ app.MapGet("/info", (string symbol, DateTime start) =>
     string res = "";
     using (var context = new APIContext())
     {
-        foreach (var item in context.Books.ToList().Where(_ => _.Name == symbol && _.Date > start))
+        foreach (var item in context.Symbols.ToList().Where(_ => _.Name == symbol && _.Date > start))
         {
             res += item.Date.ToString("yyMMdd") + ",";
             res += item.Date.ToString("HHmm") + ",";
