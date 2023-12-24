@@ -2,6 +2,7 @@ namespace Api;
 
 public class Symbol
 {
+    public uint Id { get; set; }
     public required string Name { get; set; }
 
     public double High { get; set; }
